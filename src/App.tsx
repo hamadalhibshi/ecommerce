@@ -1,9 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Login, NotFound, Register } from "./pages";
+import { Home, Login, NotFound, Products, Register } from "./pages";
+import { NavBar } from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route index element={<Home />} />
         <Route path="auth">
@@ -12,6 +14,7 @@ const App = () => {
         </Route>
 
         <Route path="*" element={<NotFound />} />
+        <Route path="products" element={<Products />} />
       </Routes>
     </BrowserRouter>
   );
