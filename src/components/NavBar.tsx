@@ -15,10 +15,10 @@ const NavBar = () => {
             <a href="/products">Products</a>
           </li>
           <li>
-            <a>About</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a>Contact</a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -28,7 +28,7 @@ const NavBar = () => {
           {/* cart */}
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
-              <IoBasketOutline color="white" size={25} />
+              <IoBasketOutline color="white" size={30} />
               <span className="badge badge-xs indicator-item">8</span>
             </div>
           </div>
@@ -36,7 +36,7 @@ const NavBar = () => {
           {/* cart inner body modal */}
           <div
             tabIndex={0}
-            className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
+            className="card card-compact dropdown-content bg-base-300 z-1 mt-3 w-52 shadow"
           >
             <div className="card-body">
               <span className="text-lg font-bold">8 Items</span>
@@ -53,7 +53,7 @@ const NavBar = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost btn-circle avatar"
+            className="btn btn-ghost btn-circle avatar ml-4"
           >
             <div className="w-10 rounded-full">
               <img
@@ -64,7 +64,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
               <a className="justify-between">

@@ -3,7 +3,7 @@ import { ProductCard } from "../../components";
 
 const Products = () => {
   return (
-    <div className="p-10">
+    <div className="p-10 bg-base-200">
       <div className="grid grid-col-1 md:grid-cols-4 gap-5">
         {products.map((product, index) => (
           <ProductCard

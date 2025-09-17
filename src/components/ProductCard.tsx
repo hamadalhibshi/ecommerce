@@ -1,6 +1,6 @@
 const ProductCard = ({ image, title, price }: any) => {
   return (
-    <div className="card bg-base-100 h-70 w-80 md:w-96 md:h-85 shadow-sm">
+    <div className="card bg-base-300 h-70 w-80 md:w-96 md:h-85 shadow-sm">
       <figure>
         <img src={image} alt={title} className="w-full" />
       </figure>
