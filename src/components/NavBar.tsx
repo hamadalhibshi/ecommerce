@@ -15,9 +15,9 @@ const NavBar = () => {
   }, [cart]);
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full z-50">
       <div className="navbar-start">
-        <a className="btn btn-ghost text-xl" href="/">
+        <a className="btn btn-ghost text-xl" onClick={() => navigate("/")}>
           E-Commerce
         </a>
       </div>
@@ -25,19 +25,19 @@ const NavBar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/products">Products</a>
+            <a onClick={() => navigate("/products")}>Products</a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a onClick={() => navigate("/about")}>About</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a onClick={() => navigate("/contact")}>Contact</a>
           </li>
           <li>
-            <a href="/auth/login">Login</a>
+            <a onClick={() => navigate("/auth/login")}>Login</a>
           </li>
           <li>
-            <a href="/auth/register">Register</a>
+            <a onClick={() => navigate("/auth/register")}>Register</a>
           </li>
         </ul>
       </div>

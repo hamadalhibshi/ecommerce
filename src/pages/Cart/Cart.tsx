@@ -7,8 +7,10 @@ const Cart = () => {
   const cart = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
 
+  console.log(cart);
+
   return (
-    <ul className="list bg-base-100 rounded-box shadow-md">
+    <ul className="list bg-base-100 rounded-box shadow-md pt-15">
       {cart?.map((item, index) => (
         <li className="list-row" key={index}>
           <div>
@@ -20,23 +22,6 @@ const Cart = () => {
               {item.price}
             </div>
           </div>
-          <button className="btn btn-square btn-ghost">
-            <svg
-              className="size-[1.2em]"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <g
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                strokeWidth="2"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path d="M6 3L20 12 6 21 6 3z"></path>
-              </g>
-            </svg>
-          </button>
           <button
             className="btn btn-square btn-ghost"
             onClick={() => dispatch(removeFromCart(item.id))}
