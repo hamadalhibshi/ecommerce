@@ -1,6 +1,9 @@
 import { IoBasketOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -19,6 +22,12 @@ const NavBar = () => {
           </li>
           <li>
             <a href="/contact">Contact</a>
+          </li>
+          <li>
+            <a href="/auth/login">Login</a>
+          </li>
+          <li>
+            <a href="/auth/register">Register</a>
           </li>
         </ul>
       </div>
@@ -42,7 +51,12 @@ const NavBar = () => {
               <span className="text-lg font-bold">8 Items</span>
               <span className="text-info">Subtotal: $999</span>
               <div className="card-actions">
-                <button className="btn btn-primary btn-block">View cart</button>
+                <button
+                  className="btn btn-primary btn-block"
+                  onClick={() => navigate("/cart")}
+                >
+                  View cart
+                </button>
               </div>
             </div>
           </div>

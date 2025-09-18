@@ -1,14 +1,22 @@
-const ProductCard = ({ image, title, price }: any) => {
+const ProductCard = ({ image, title, price, onClick }: any) => {
   return (
-    <div className="card bg-base-300 h-70 w-80 md:w-96 md:h-85 shadow-sm">
+    <div className="card card-sm bg-base-100 max-w-90 shadow">
       <figure>
-        <img src={image} alt={title} className="w-full" />
+        <img
+          src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp"
+          className="hover:scale-110"
+        />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{title}</h2>
-        <p>{price}</p>
+        <h2 className="card-title flex justify-between">
+          {title}
+          <span className="font-normal">{price}</span>
+        </h2>
+        <p>{title}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Add to cart</button>
+          <button onClick={onClick} className="btn btn-primary">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
