@@ -1,7 +1,15 @@
 import { products } from "../../constants";
 import { ProductCard } from "../../components";
+import { useDispatch } from "react-redux";
+import { addToCart, type CartState } from "../../state/cart/cartSlice";
 
 const Products = () => {
+  const dispatch = useDispatch();
+
+  const addToCartAction = (items: CartState) => {
+    dispatch(addToCart(items));
+  };
+
   return (
     <div className="bg-base-200 p-10">
       <div
@@ -15,6 +23,7 @@ const Products = () => {
             title={product.name}
             image={product.image}
             price={product.price}
+            onClick={() => addToCartAction(product)}
           />
         ))}
       </div>

@@ -1,8 +1,18 @@
 import { IoBasketOutline } from "react-icons/io5";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import type { RootState } from "../state/Store";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
+  const [cartTotal, setCartTotal] = useState(0);
   const navigate = useNavigate();
+  const cart = useSelector((state: RootState) => state.cart);
+
+  useEffect(() => {
+    const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
+    setCartTotal(total);
+  }, [cart]);
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -38,7 +48,11 @@ const NavBar = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
               <IoBasketOutline color="white" size={30} />
-              <span className="badge badge-xs indicator-item">8</span>
+              {cart?.length > 0 && (
+                <span className="badge badge-xs indicator-item">
+                  {cart?.length}
+                </span>
+              )}
             </div>
           </div>
 
@@ -48,8 +62,8 @@ const NavBar = () => {
             className="card card-compact dropdown-content bg-base-300 z-1 mt-3 w-52 shadow"
           >
             <div className="card-body">
-              <span className="text-lg font-bold">8 Items</span>
-              <span className="text-info">Subtotal: $999</span>
+              <span className="text-lg font-bold">{cart?.length} items</span>
+              <span className="text-info">Subtotal: ${cartTotal}</span>
               <div className="card-actions">
                 <button
                   className="btn btn-primary btn-block"
