@@ -33,23 +33,17 @@ const NavBar = () => {
           <li>
             <a onClick={() => navigate("/contact")}>Contact</a>
           </li>
-          <li>
-            <a onClick={() => navigate("/auth/login")}>Login</a>
-          </li>
-          <li>
-            <a onClick={() => navigate("/auth/register")}>Register</a>
-          </li>
         </ul>
       </div>
 
       <div className="navbar-end">
         <div className="dropdown dropdown-end">
           {/* cart */}
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div tabIndex={0} role="button" className="btn btn-ghost">
             <div className="indicator">
               <IoBasketOutline color="white" size={30} />
               {cart?.length > 0 && (
-                <span className="badge badge-xs indicator-item">
+                <span className="badge badge-xs indicator-item bg-red-600">
                   {cart?.length}
                 </span>
               )}
@@ -108,6 +102,14 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <a onClick={() => navigate("/auth/login")}>Login</a>
+          </li>
+          <li>
+            <a onClick={() => navigate("/auth/register")}>Register</a>
+          </li>
+        </ul>
       </div>
     </div>
   );

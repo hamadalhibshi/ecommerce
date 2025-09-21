@@ -1,17 +1,13 @@
 import { products } from "../../constants";
 import { ProductCard } from "../../components";
 import { useDispatch } from "react-redux";
-import { addToCart, type CartState } from "../../state/cart/cartSlice";
+import { addToCart } from "../../state/cart/cartSlice";
 
 const Products = () => {
   const dispatch = useDispatch();
 
-  const addToCartAction = (items: CartState) => {
-    dispatch(addToCart(items));
-  };
-
   return (
-    <div className="bg-base-200 p-10 mt-10">
+    <div className="bg-base-200 p-30 mt-10">
       <div
         className="grid grid-col-1 gap-5 place-items-center
       md:grid-cols-4
@@ -23,7 +19,7 @@ const Products = () => {
             title={product.name}
             image={product.image}
             price={product.price}
-            onClick={() => addToCartAction(product)}
+            onClick={() => dispatch(addToCart(product))}
           />
         ))}
       </div>

@@ -1,5 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Cart, Home, Login, NotFound, Products, Register } from "./pages";
+import {
+  Cart,
+  Home,
+  Login,
+  NotFound,
+  ProductDetails,
+  Products,
+  Register,
+} from "./pages";
 import { NavBar } from "./components";
 
 const App = () => {
@@ -16,6 +24,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
         <Route path="products" element={<Products />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="product-details" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   );

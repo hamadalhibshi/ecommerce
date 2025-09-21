@@ -7,8 +7,6 @@ const Cart = () => {
   const cart = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
 
-  console.log(cart);
-
   return (
     <ul className="list bg-base-100 rounded-box shadow-md pt-15">
       {cart?.map((item, index) => (
