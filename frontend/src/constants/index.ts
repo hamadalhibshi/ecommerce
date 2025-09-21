@@ -72,3 +72,22 @@ export const products = [
     image: "https://picsum.photos/id/1100/300/200",
   },
 ];
+
+
+export const navigation = [
+  {
+    id: 0,
+    title:'Product',
+    href:'/products'
+  },
+  {
+    id: 1,
+    title:'About',
+    href:'/about'
+  },
+  {
+    id: 2,
+    title:'Contact',
+    href:'/contact'
+  }
+]
