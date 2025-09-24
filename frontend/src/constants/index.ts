@@ -91,3 +91,33 @@ export const navigation = [
     href:'/contact'
   }
 ]
+
+export const productDetails = {
+  id: 1,
+  name: "Basic Tee 6-Pack",
+  price: '19.99',
+  image: "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
+  description: "The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: &quot;Black&quot;. Need to add an extra pop of color to your outfit? Our white tee has you covered.",
+  highlights: [
+    "Hand cut and sewn locally",
+    "Dyed with our proprietary colors",
+    "Pre-washed &amp; pre-shrunk",
+    "Ultra-soft 100% cotton",
+  ],
+  details: [
+    "The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited release.",
+  ],
+  sizes: [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL",
+  ],
+  colors: [
+    "Black",
+    "White",
+    "Gray",
+  ],
+}

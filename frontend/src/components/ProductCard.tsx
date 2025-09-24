@@ -4,11 +4,8 @@ const ProductCard = ({ image, title, price, onClick }: any) => {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="card card-sm bg-base-100 max-w-80 shadow max-h-120"
-      onClick={() => navigate("/product-details")}
-    >
-      <figure>
+    <div className="card card-sm bg-base-100 max-w-80 shadow max-h-120">
+      <figure onClick={() => navigate("/product-details")}>
         <img
           src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp"
           className="hover:scale-110"
