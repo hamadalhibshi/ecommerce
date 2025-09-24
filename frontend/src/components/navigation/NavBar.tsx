@@ -1,10 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import {
-  CartDrawer,
-  DesktopNavigation,
-  MobileNavDrawer,
-  ProfileDropdown,
-} from "./components";
+import { CartDrawer, MobileNavDrawer, ProfileDropdown } from "./components";
+import { navigation } from "../../constants";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -21,10 +17,28 @@ const NavBar = () => {
         </a>
       </div>
 
-      <DesktopNavigation />
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          {navigation.map((nav) => (
+            <li key={nav.id}>
+              <a onClick={() => navigate(nav.href)}>{nav.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      <CartDrawer />
-      <ProfileDropdown />
+      <div className="navbar-end">
+        <CartDrawer />
+        <ProfileDropdown />
+        <ul className="menu menu-horizontal px-1 hidden lg:flex">
+          <li>
+            <a onClick={() => navigate("/auth/login")}>Login</a>
+          </li>
+          <li>
+            <a onClick={() => navigate("/auth/register")}>Register</a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
