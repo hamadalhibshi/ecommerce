@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import type { RootState } from "../../../state/Store";
 import Drawer from "../../Drawer";
 import { removeFromCart } from "../../../state/cart/cartSlice";
+import { IoIosClose } from "react-icons/io";
 
 const CartDrawer = () => {
   const [cartTotal, setCartTotal] = useState(0);
@@ -25,32 +26,16 @@ const CartDrawer = () => {
             <h2 id="drawer-title" className="text-lg font-medium text-gray-900">
               Shopping cart
             </h2>
-            {/* <div className="ml-3 flex h-7 items-center">
-              <button
-                type="button"
-                command="close"
-                commandfor="drawer"
-                className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
-              >
-                <span className="absolute -inset-0.5"></span>
-                <span className="sr-only">Close panel</span>
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  data-slot="icon"
-                  aria-hidden="true"
-                  className="size-6"
-                >
-                  <path
-                    d="M6 18 18 6M6 6l12 12"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            </div> */}
+            <label
+              htmlFor="cart-drawer"
+              className="ml-3 flex h-7 items-center cursor-pointer"
+            >
+              <IoIosClose
+                className=" hover:text-gray-500"
+                size={35}
+                color="black"
+              />
+            </label>
           </div>
 
           <div className="mt-8">
