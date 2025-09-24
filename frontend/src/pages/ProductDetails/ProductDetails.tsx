@@ -149,10 +149,9 @@ const ProductDetails = () => {
                     />
                   </svg>
                 </div>
-                <p className="sr-only">4 out of 5 stars</p>
                 <a
                   href="#"
-                  className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                  className="ml-3 text-sm font-medium text-indigo-500 hover:text-indigo-600"
                 >
                   117 reviews
                 </a>
@@ -189,7 +188,7 @@ const ProductDetails = () => {
                 <h3 className="text-sm font-medium">Size</h3>
                 <a
                   href="#"
-                  className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                  className="text-sm font-medium text-indigo-500 hover:text-indigo-600"
                 >
                   Size guide
                 </a>
