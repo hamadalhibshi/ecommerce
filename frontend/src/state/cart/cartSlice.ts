@@ -5,6 +5,7 @@ export interface CartState {
     name: string;
     image: string;
     price: string;
+    quantity: number;
 }
 
 type CartItems = CartState[]

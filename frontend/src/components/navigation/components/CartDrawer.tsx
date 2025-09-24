@@ -77,7 +77,7 @@ const CartDrawer = () => {
                         <p className="mt-1 text-sm text-gray-500">Salmon</p>
                       </div>
                       <div className="flex flex-1 items-end justify-between text-sm">
-                        <p className="text-gray-500">Qty {item.quantity} 1</p>
+                        <p className="text-gray-500">Qty {item.quantity}</p>
 
                         <div className="flex">
                           <button
@@ -106,23 +106,24 @@ const CartDrawer = () => {
             Shipping and taxes calculated at checkout.
           </p>
           <div className="mt-6">
-            <a
+            <label
+              htmlFor="cart-drawer"
               onClick={() => navigate("/cart")}
-              className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-indigo-700"
+              className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-indigo-700 cursor-pointer"
             >
               Checkout
-            </a>
+            </label>
           </div>
           <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
             <p>
               or
-              <button
-                className="font-medium text-indigo-600 hover:text-indigo-500 ml-2"
-                // onClick={}
+              <label
+                htmlFor="cart-drawer"
+                className="font-medium text-indigo-600 hover:text-indigo-500 ml-2 cursor-pointer"
               >
                 Continue Shopping
                 <span aria-hidden="true"> &rarr;</span>
-              </button>
+              </label>
             </p>
           </div>
         </div>
