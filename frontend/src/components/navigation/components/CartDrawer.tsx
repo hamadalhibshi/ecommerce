@@ -59,7 +59,9 @@ const CartDrawer = () => {
                           </h3>
                           <p className="ml-4">{item.price}</p>
                         </div>
-                        <p className="mt-1 text-sm text-gray-500">Salmon</p>
+                        <p className="mt-1 text-sm text-gray-500">
+                          {item.size} M
+                        </p>
                       </div>
                       <div className="flex flex-1 items-end justify-between text-sm">
                         <p className="text-gray-500">Qty {item.quantity}</p>

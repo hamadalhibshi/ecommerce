@@ -6,6 +6,7 @@ export interface CartState {
     image: string;
     price: string;
     quantity: number;
+    size: string;
 }
 
 type CartItems = CartState[]
