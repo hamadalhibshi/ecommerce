@@ -68,19 +68,18 @@ const ProductDetails = () => {
 
         {/* <!-- Product info --> */}
         <div className="sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
-          <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+          <div className="lg:col-span-2 lg:pr-8">
             <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
-              Basic Tee 6-Pack
+              {productDetails.name}
             </h1>
           </div>
 
           {/* <!-- Options --> */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
-            <h2 className="sr-only">{productDetails.name}</h2>
             <p className="text-3xl tracking-tight">${productDetails.price}</p>
 
             {/* <!-- Reviews --> */}
-            <div className="mt-6">
+            <div className="my-6">
               <h3 className="sr-only">Reviews</h3>
               <div className="flex items-center">
                 <div className="flex items-center">
