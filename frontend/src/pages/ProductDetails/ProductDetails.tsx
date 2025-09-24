@@ -12,21 +12,21 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="pt-20">
-      <div className="mt-6 sm:px-6 lg:px-8 flex">
+    <div className="pt-20 px-5">
+      <div className="mt-6 sm:px-6 lg:px-8 flex flex-wrap lg:flex-nowrap">
         {/* <!-- Image gallery --> */}
-        <div className="flex flex-col gap-5 w-3/3 max-h-[700px]">
+        <div className="flex flex-col gap-5 lg:w-3/3 lg:max-h-[700px]">
           <img
             src={selectedImage}
             alt="Two each of gray, white, and black shirts laying flat."
-            className="row-span-2 aspect-3/4 size-full rounded-lg object-cover max-lg:hidden"
+            className="row-span-2 aspect-3/4 size-full rounded-lg object-cover"
           />
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 mb-5">
             <img
               src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
               alt="Two each of gray, white, and black shirts laying flat."
-              className="col-start-2 w-28 h-20 rounded-lg object-cover max-lg:hidden"
+              className="col-start-2 w-28 h-20 rounded-lg object-cover"
               onClick={() => {
                 setSelectedImage(
                   "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
@@ -36,7 +36,7 @@ const ProductDetails = () => {
             <img
               src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
               alt="Model wearing plain black basic tee."
-              className="col-start-2 w-28 h-20 rounded-lg object-cover max-lg:hidden"
+              className="col-start-2 w-28 h-20 rounded-lg object-cover"
               onClick={() => {
                 setSelectedImage(
                   "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
@@ -46,7 +46,7 @@ const ProductDetails = () => {
             <img
               src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
               alt="Model wearing plain gray basic tee."
-              className="col-start-2 row-start-2 w-28 h-20 rounded-lg object-cover max-lg:hidden"
+              className="col-start-2 row-start-2 w-28 h-20 rounded-lg object-cover"
               onClick={() => {
                 setSelectedImage(
                   "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
@@ -56,7 +56,7 @@ const ProductDetails = () => {
             <img
               src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg"
               alt="Model wearing plain white basic tee."
-              className="col-start-2 w-28 h-20 rounded-lg object-cover max-lg:hidden"
+              className="col-start-2 w-28 h-20 rounded-lg object-cover"
               onClick={() => {
                 setSelectedImage(
                   "https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg"
