@@ -6,7 +6,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full z-50">
+    <div className="navbar bg-base-100 shadow-sm fixed top-0 w-full z-50">
       <MobileNavDrawer />
       <div className="navbar-start">
         <a
@@ -30,14 +30,14 @@ const NavBar = () => {
       <div className="navbar-end">
         <CartDrawer />
         <ProfileDropdown />
-        <ul className="menu menu-horizontal px-1 hidden lg:flex">
+        {/* <ul className="menu menu-horizontal px-1 hidden lg:flex">
           <li>
             <a onClick={() => navigate("/auth/login")}>Login</a>
           </li>
           <li>
             <a onClick={() => navigate("/auth/register")}>Register</a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ const ProfileDropdown = () => {
       <div
         tabIndex={0}
         role="button"
-        className="btn btn-ghost btn-circle avatar ml-4"
+        className="btn btn-ghost btn-circle avatar mx-2"
       >
         <div className="w-10 rounded-full">
           <img
