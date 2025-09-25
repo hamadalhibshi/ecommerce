@@ -77,7 +77,7 @@ export const products = [
 export const navigation = [
   {
     id: 0,
-    title:'Product',
+    title:'Products',
     href:'/products'
   },
   {
