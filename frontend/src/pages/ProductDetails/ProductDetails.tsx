@@ -2,6 +2,7 @@ import { useState } from "react";
 import { productDetails } from "../../constants";
 import { addToCart } from "../../state/cart/cartSlice";
 import { useDispatch } from "react-redux";
+import { Screen } from "../../components";
 
 const ProductDetails = () => {
   const [selectedImage, setSelectedImage] = useState(
@@ -12,7 +13,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="pt-20 px-5">
+    <Screen className="pt-20">
       <div className="mt-6 sm:px-6 lg:px-8 flex flex-wrap lg:flex-nowrap">
         {/* <!-- Image gallery --> */}
         <div className="flex flex-col gap-5 lg:w-3/3 lg:max-h-[700px]">
@@ -261,7 +262,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Screen>
   );
 };
 

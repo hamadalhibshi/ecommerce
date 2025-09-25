@@ -1,5 +1,5 @@
 import { products } from "../../constants";
-import { ProductCard } from "../../components";
+import { ProductCard, Screen } from "../../components";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../state/cart/cartSlice";
 
@@ -7,7 +7,7 @@ const Products = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="bg-base-200 p-30 mt-10">
+    <Screen className="pt-30">
       <div
         className="grid grid-col-1 gap-5 place-items-center
       md:grid-cols-4
@@ -23,7 +23,7 @@ const Products = () => {
           />
         ))}
       </div>
-    </div>
+    </Screen>
   );
 };
 

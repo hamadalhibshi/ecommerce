@@ -1,9 +1,17 @@
 import Footer from "./Footer";
 
-const Screen = ({ children }: { children: React.ReactNode }) => {
+const Screen = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <div className="bg-base-200 mt-10 px-10">
-      <div>{children}</div>
+    <div
+      className={`min-h-screen flex flex-col bg-base-200 pt-15 ${className}`}
+    >
+      <div className="flex-1 px-10">{children}</div>
       <Footer />
     </div>
   );
