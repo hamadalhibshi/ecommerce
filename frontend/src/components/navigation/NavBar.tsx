@@ -30,14 +30,14 @@ const NavBar = () => {
       <div className="navbar-end">
         <CartDrawer />
         <ProfileDropdown />
-        {/* <ul className="menu menu-horizontal px-1 hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 hidden lg:flex">
           <li>
             <a onClick={() => navigate("/auth/login")}>Login</a>
           </li>
           <li>
             <a onClick={() => navigate("/auth/register")}>Register</a>
           </li>
-        </ul> */}
+        </ul>
       </div>
     </div>
   );
