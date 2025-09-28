@@ -10,7 +10,7 @@ const NavBar = () => {
       <MobileNavDrawer />
       <div className="navbar-start">
         <a
-          className="btn btn-ghost text-xl text-center"
+          className="btn btn-ghost md:text-xl text-center"
           onClick={() => navigate("/")}
         >
           E-Commerce

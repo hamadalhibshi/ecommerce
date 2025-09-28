@@ -5,7 +5,7 @@ const MobileNavDrawer = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="drawer lg:hidden">
+    <div className="drawer lg:hidden navbar-start">
       <input id="mobile-nav-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         <label htmlFor="mobile-nav-drawer" className="btn btn-ghost btn-square">
